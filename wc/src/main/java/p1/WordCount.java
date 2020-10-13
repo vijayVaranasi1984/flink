@@ -27,6 +27,9 @@ public class WordCount {
 		});
 		
 		DataSet<Tuple2<String, Integer>> tokenized = filtered.map(new Tokenizer());// tokanized = [(Nipun,1) (Noman,1)...]
+		
+		
+		
 
 		DataSet<Tuple2<String, Integer>> counts = tokenized.groupBy(new int[] { 0 }).sum(1);// groupBy(0)
 		
