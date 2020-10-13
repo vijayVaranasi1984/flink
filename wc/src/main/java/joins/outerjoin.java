@@ -41,8 +41,8 @@ public class outerjoin {
 		// right outer join datasets on person_id
 		// joined format will be <id, person_name, state>
 
-		DataSet<Tuple3<Integer, String, String>> joined = personSet.fullOuterJoin(locationSet).where(0).equalTo(0).with(
-				new JoinFunction<Tuple2<Integer, String>, Tuple2<Integer, String>, Tuple3<Integer, String, String>>() {
+		DataSet<Tuple3<Integer, String, String>> joined = personSet.fullOuterJoin(locationSet).where(0).equalTo(0)
+				.with(new JoinFunction<Tuple2<Integer, String>, Tuple2<Integer, String>, Tuple3<Integer, String, String>>() {
 
 					public Tuple3<Integer, String, String> join(Tuple2<Integer, String> person,
 							Tuple2<Integer, String> location) {
