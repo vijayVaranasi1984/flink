@@ -26,6 +26,7 @@ public class IterateDemo {
 		// define iteration
 		DataStream<Tuple2<Long, Integer>> plusOne = iteration
 				.map(new MapFunction<Tuple2<Long, Integer>, Tuple2<Long, Integer>>() {
+					
 					public Tuple2<Long, Integer> map(Tuple2<Long, Integer> value) {
 						if (value.f0 == 10)
 							return value;
@@ -36,6 +37,7 @@ public class IterateDemo {
 
 		// part of stream to be used in next iteration (
 		DataStream<Tuple2<Long, Integer>> notEqualtoten = plusOne.filter(new FilterFunction<Tuple2<Long, Integer>>() {
+			
 			public boolean filter(Tuple2<Long, Integer> value) {
 				if (value.f0 == 10)
 					return false;
@@ -49,6 +51,7 @@ public class IterateDemo {
 
 		// data not feedback to iteration
 		DataStream<Tuple2<Long, Integer>> equaltoten = plusOne.filter(new FilterFunction<Tuple2<Long, Integer>>() {
+			
 			public boolean filter(Tuple2<Long, Integer> value) {
 				if (value.f0 == 10)
 					return true;
