@@ -15,7 +15,8 @@ public class DataServer {
 				Socket socket = listener.accept();
 				System.out.println("Got new connection: " + socket.toString());
 				
-				BufferedReader br = new BufferedReader(new FileReader("D:\\Flink\\tumblingwindowswithprocessingtime\\avg"));
+				//BufferedReader br = new BufferedReader(new FileReader("D:\\Flink\\tumblingwindowswithprocessingtime\\avg"));
+				BufferedReader br = new BufferedReader(new FileReader("D:\\Flink\\slidingwidowswithprocessingtime\\avg"));
 				
 				try {
 					PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
