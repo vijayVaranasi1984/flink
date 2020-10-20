@@ -10,7 +10,7 @@ import java.net.ServerSocket;
 public class DataServer {
 	public static void main(String[] args) throws IOException
 	{
-		ServerSocket listener = new ServerSocket(9094);
+		ServerSocket listener = new ServerSocket(9095);
 		try{
 				Socket socket = listener.accept();
 				System.out.println("Got new connection: " + socket.toString());
