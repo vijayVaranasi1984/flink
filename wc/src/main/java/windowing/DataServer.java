@@ -10,21 +10,36 @@ import java.net.ServerSocket;
 public class DataServer {
 	public static void main(String[] args) throws IOException
 	{
-		ServerSocket listener = new ServerSocket(9091);
+		ServerSocket listener = new ServerSocket(9094);
 		try{
 				Socket socket = listener.accept();
 				System.out.println("Got new connection: " + socket.toString());
 				
 				//BufferedReader br = new BufferedReader(new FileReader("D:\\Flink\\tumblingwindowswithprocessingtime\\avg"));
-				BufferedReader br = new BufferedReader(new FileReader("D:\\Flink\\slidingwidowswithprocessingtime\\avg"));
+				//BufferedReader br = new BufferedReader(new FileReader("D:\\Flink\\slidingwidowswithprocessingtime\\avg"));
+				//BufferedReader br = new BufferedReader(new FileReader("D:\\Flink\\Sessionwindowswithprocessingtime\\avg"));
+				BufferedReader br = new BufferedReader(new FileReader("D:\\Flink\\avg"));
 				
 				try {
 					PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 					String line;
+					
+//					while ((line = br.readLine()) != null){
+//						
+//						out.println(line);
+//						Thread.sleep(50);
+//					}
+					int count = 0;
 					while ((line = br.readLine()) != null){
+						count++;
 						
 						out.println(line);
-						Thread.sleep(50);
+						if (count >= 10){
+							count = 0;
+							Thread.sleep(1000);
+						}
+						else
+							Thread.sleep(50);
 					}
 					
 				} finally{
