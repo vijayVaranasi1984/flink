@@ -1,0 +1,77 @@
+flink.bat run D:\Flink\WordCount.jar -input D:\Flink\input.txt -output D:\Flink\output.txt
+=============
+flink.bat run D:\Flink\flatmap.jar -flatmap D:\Flink\flatmap.txt -flatmapoutput D:\Flink\flatmapoutput.txt
+
+==============
+JOIN
+=================
+flink.bat run D:\Flink\innnerjoin.jar -input1 D:\Flink\JOINS\person.txt -input2 D:\Flink\JOINS\location.txt -joinoutput D:\Flink\joinoutput.txt
+
+
+flink.bat run D:\Flink\outerjoin.jar -input1 D:\Flink\JOINS\person.txt -input2 D:\Flink\JOINS\location.txt -joinoutput D:\Flink\joinoutput.txt
+
+=======================
+
+ncat -l 9999
+
+flink.bat run D:\Flink\stream.jar
+
+ncat -l 9999
+Nipun
+Noman
+================================
+reduce
+=============
+
+flink.bat run D:\Flink\reduce.jar -input D:\Flink\reduceoperator\avg.txt
+
+
+==================
+aggregate
+
+flink.bat run D:\Flink\aggregate.jar -input D:\Flink\aggregaton\avg1.txt
+-----------------------
+split stream
+
+flink.bat run D:\Flink\splitstream.jar
+---------------------------
+iterator
+
+flink.bat run D:\Flink\iterator.jar
+
+----------------------
+flink.bat run D:\Flink\tp.jar
+
+flink.bat run D:\Flink\tpevent.jar
+
+flink.bat run D:\Flink\sliding.jar
+
+flink.bat run D:\Flink\session.jar
+
+flink.bat run D:\Flink\global.jar
+
+
+---------------------
+flink.bat run D:\Flink\watermark.jar
+
+----------------------
+flink.bat run D:\Flink\valuestate.jar
+
+
+flink.bat run D:\Flink\liststate.jar
+
+flink.bat run D:\Flink\reducedstate.jar
+
+------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
