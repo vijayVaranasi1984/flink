@@ -62,6 +62,10 @@ flink.bat run D:\Flink\liststate.jar
 
 flink.bat run D:\Flink\reducedstate.jar
 
+flink.bat run D:\Flink\checkpointing.jar
+
+flink.bat run D:\Flink\broadcast.jar
+
 ------------------------------------
 
 
