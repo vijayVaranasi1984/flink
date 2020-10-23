@@ -66,6 +66,8 @@ flink.bat run D:\Flink\checkpointing.jar
 
 flink.bat run D:\Flink\broadcast.jar
 
+flink.bat run D:\Flink\queryable.jar
+
 ------------------------------------
 
 
