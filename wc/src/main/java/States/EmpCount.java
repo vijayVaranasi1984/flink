@@ -24,7 +24,7 @@ public class EmpCount {
 	public static void main(String[] args) throws Exception {
 		final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
-		DataStream<String> excludeEmp = env.socketTextStream("localhost", 9092);
+		DataStream<String> excludeEmp = env.socketTextStream("localhost", 9093);
 
 		BroadcastStream<String> excludeEmpBroadcast = excludeEmp.broadcast(excludeEmpDescriptor);
 

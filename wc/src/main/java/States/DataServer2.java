@@ -13,13 +13,13 @@ import java.io.BufferedReader;
 
 public class DataServer2 {
 	public static void main(String[] args) throws IOException {
-		ServerSocket listener = new ServerSocket(9092);
+		ServerSocket listener = new ServerSocket(9093);
 		BufferedReader br = null;
 		try {
 			Socket socket = listener.accept();
 			System.out.println("Got new connection: " + socket.toString());
 
-			br = new BufferedReader(new FileReader("/Flink/state/broadcast/broadcast_small"));
+			br = new BufferedReader(new FileReader("D:\\Flink\\state\\broadcast\\broadcast_small"));
 
 			try {
 				PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
