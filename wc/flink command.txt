@@ -75,6 +75,8 @@ flink.bat run D:\Flink\banktrans.jar
 
 flink.bat run D:\Flink\stock.jar
 
+flink.bat run D:\Flink\graph.jar
+
 
 
 
