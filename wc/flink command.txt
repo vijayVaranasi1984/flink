@@ -69,7 +69,8 @@ flink.bat run D:\Flink\broadcast.jar
 flink.bat run D:\Flink\queryable.jar
 
 ------------------------------------
-
+flink.bat run D:\Flink\bank.jar
+flink.bat run D:\Flink\banktrans.jar
 
 
 
